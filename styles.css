@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(240, 245, 235);
+}
+.container {
+    position: relative;
+    display: block;
+    width: 720px;
+    height: 480px;
+    margin: 50px auto;
+    overflow: hidden;
+    outline: 1px solid #555;
+    box-shadow: 2px 3px 3px rgba(75, 75, 75, 0.7)
+}
+
+.container > div {
+    display: block;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#game {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* GAME INTRO */
+
+#game-intro {
+    font-family: 'Fjalla One';
+    background: rgb(220, 150, 0);
+    text-align: center;
+    color: black;
+    font-size: 72px;
+}
+
+#game-intro.hide {
+    opacity: 0;
+    transition: all 0.75s;
+    transform: scale(10);
+}
+
+#game-intro.show {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+#game-intro img {
+    width: 100px;
+    height: auto;
+}
+
+#game-intro button {
+    outline: none;
+    border: none;
+    background: rgb(250, 220, 100);
+    color: rgb(75, 75, 75);
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* GAME OVER */
+
+#game-over {
+    font-family: 'Indie Flower';
+    background: rgb(128, 0, 0);
+    text-align: center;
+    color: white;
+    font-size: 72px;
+    transition: all 0.5s;
+}
+
+#game-over.hide {
+    visibility: hidden;
+    transform: translateY(480px);
+    opacity: 0;
+}
+
+#game-over.show {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+#game-over div {
+    position: relative;;
+    top: 50px;
+}
+
+
+#game-over button {
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    background: teal;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#game-over button img {
+    width: 25px;
+    height: auto;
+}
+
+/* GAME WIN */
+
+#game-win {
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    background: rgb(0, 128, 200);
+    text-align: center;
+    color: white;
+    font-size: 72px;
+    transition: transform 1s, opacity 1.25s;
+}
+
+#game-win.hide {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.25) rotate(720deg);
+}
+
+#game-win.show {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+#game-win div {
+    position: relative;;
+    top: 25px;
+}
+
+#game-win button {
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    background: purple;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#game-win button img {
+    width: 25px;
+    height: auto;
+}

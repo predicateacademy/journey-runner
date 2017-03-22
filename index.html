@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Runner</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Indie+Flower" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <canvas id="game"></canvas>
+            <div id="game-intro" class="hide">
+                <div>RUNNER</div>
+                <br>
+                <img src="images/menus/runner.png">
+                <br>
+                <button onclick="if (gameLoaded) gameStart()">
+                    start
+                </button>
+            </div>
+            <div id="game-over" class="hide">
+                <div>GAME OVER</div>
+                <p id="game-over-score">your score: </p>
+                <button onclick="if (location.href.endsWith('?skip-intro')) { location.reload() } else { location.assign(location.href + '?skip-intro') }">
+                    try again
+                    <img src="images/menus/restart.png">
+                </button>
+            </div>
+            <div id="game-win" class="hide">
+                <div>YOU WIN</div>
+                <br>
+                <button onclick="if (location.href.endsWith('?skip-intro')) { location.reload() } else { location.assign(location.href + '?skip-intro') }">
+                    replay
+                    <img src="images/menus/restart.png">
+                </button>
+            </div>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
+</html>
